@@ -56,32 +56,38 @@ class Dashboard extends Component {
   render() {
     return (
       <React.Fragment>
-        <h1>Dashboard</h1>
-        <h2>showing total {this.state.user.length} employees</h2>
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">ID</th>
-              <th scope="col">Name</th>
-              <th scope="col">Age</th>
-              <th scope="col">Gender</th>
-              <th scope="col">Email</th>
-              <th scope="col">phoneNo</th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.state.user.map(u => (
-              <tr>
-                <td>{u.id}</td>
-                <td>{u.name}</td>
-                <td>{u.age}</td>
-                <td>{u.gender}</td>
-                <td>{u.email}</td>
-                <td>{u.phoneNo}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <div className="container">
+          <div className="row">
+            <div className="col-8">
+              <h1>Dashboard</h1>
+              <h2>showing total {this.state.user.length} employees</h2>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">phoneNo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.state.user.map(u => (
+                    <tr>
+                      <td>{u.id}</td>
+                      <td>{u.name}</td>
+                      <td>{u.age}</td>
+                      <td>{u.gender}</td>
+                      <td>{u.email}</td>
+                      <td>{u.phoneNo}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
       </React.Fragment>
     );
   }
